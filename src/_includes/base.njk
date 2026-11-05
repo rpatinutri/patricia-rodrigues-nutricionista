@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ metaTitle or title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#f4f2f2">
+
+  <meta property="og:type" content="{{ ogType or 'profile' }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Patricia Rodrigues Nutricionista">
+  <meta property="og:title" content="{{ ogTitle or metaTitle or title }}">
+  <meta property="og:description" content="{{ ogDescription or description }}">
+  {% if imagem %}<meta property="og:image" content="{{ site.siteUrl }}{{ imagem }}">{% endif %}
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="{{ assetBase }}assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="{{ assetBase }}assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ assetBase }}assets/css/estilo.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="cabecalho__interno">
+      <a class="marca" href="{{ home }}#inicio" aria-label="Patricia Rodrigues Nutricionista — início">
+        <img src="{{ assetBase }}assets/img/logo-simbolo.webp" alt="" width="160" height="160">
+        <span>
+          <span class="marca__nome">Patricia Rodrigues</span>
+          <span class="marca__descritivo">Nutricionista</span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+        <ul class="navegacao__lista">
+          <li><a href="{{ home }}#sobre">Quem sou eu</a></li>
+          <li><a href="{{ home }}#atendimento">Atendimento</a></li>
+          {% if collections.postsPublicados.length %}
+          <li><a href="{{ assetBase }}blog/">Artigos</a></li>
+          {% endif %}
+          <li><a href="{{ home }}#contato">Contato</a></li>
+        </ul>
+        <a class="botao botao--pequeno" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+{{ content | safe }}
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__interno">
+      <div class="rodape__marca">
+        <img src="{{ assetBase }}assets/img/logo-simbolo.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+        <p>
+          <span class="rodape__nome">Patricia Rodrigues</span>
+          <span class="rodape__descritivo">Nutricionista · CRN {{ site.crn }}</span>
+        </p>
+      </div>
+
+      <nav class="rodape__navegacao" aria-label="Navegação do rodapé">
+        <a href="{{ home }}#sobre">Quem sou eu</a>
+        <a href="{{ home }}#atendimento">Atendimento</a>
+        {% if collections.postsPublicados.length %}
+        <a href="{{ assetBase }}blog/">Artigos</a>
+        {% endif %}
+        <a href="{{ home }}#contato">Contato</a>
+      </nav>
+
+      <address class="rodape__endereco">
+        Rua 15 de Novembro, Nº 15 — Centro<br>
+        Ibiúna/SP · 18150-045<br>
+        <a href="{{ site.telefoneLink }}" target="_blank" rel="noopener">{{ site.telefone }}</a>
+      </address>
+    </div>
+
+    <div class="rodape__base">
+      <p>© <span id="ano">2026</span> Patricia Rodrigues Nutricionista. Todos os direitos reservados.</p>
+      <p>Site institucional · atendimento com horário agendado</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var hash = window.location.hash;
+      if (hash.indexOf("invite_token") === -1 && hash.indexOf("recovery_token") === -1) return;
+      var script = document.createElement("script");
+      script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
+      script.onload = function () {
+        window.netlifyIdentity.on("init", function (user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+
+  <script src="{{ assetBase }}assets/js/script.js" defer></script>
+</body>
+</html>

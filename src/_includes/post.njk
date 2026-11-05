@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <div class="secao__interno">
+    <p class="olho">{{ tipo or "Artigo" }}</p>
+    <h1>{{ title }}</h1>
+    <p class="post__data">{{ date | dataBR }}</p>
+
+    {% if imagem %}
+    <img class="post__imagem" src="{{ imagem }}" alt="" width="960" height="540" decoding="async">
+    {% endif %}
+
+    {% if fonte %}
+    <p class="post__fonte">
+      Fonte:
+      {% if fonte_url %}
+      <a href="{{ fonte_url }}" target="_blank" rel="noopener">{{ fonte }}</a>
+      {% else %}
+      {{ fonte }}
+      {% endif %}
+    </p>
+    {% endif %}
+
+    {% if resumo %}
+    <div class="post__resumo">
+      <h2>O que o artigo diz</h2>
+      <p>{{ resumo }}</p>
+    </div>
+    {% endif %}
+
+    {% if tipo == "Artigo comentado" %}
+    <h2 class="post__titulo-comentario">Meu comentário</h2>
+    {% endif %}
+
+    <div class="post__conteudo">
+      {{ content | safe }}
+    </div>
+
+    <p class="post__voltar">
+      <a class="link-seta" href="{{ assetBase }}blog/">Ver todos os artigos</a>
+    </p>
+  </div>
+</article>

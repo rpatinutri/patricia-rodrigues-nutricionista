@@ -1,0 +1,15 @@
+{
+  "name": "patricia-rodrigues-nutricionista",
+  "version": "1.0.0",
+  "description": "Site institucional e blog da nutricionista Patricia Rodrigues (Ibiuna/SP)",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "npm run limpar && eleventy",
+    "dev": "eleventy --serve",
+    "limpar": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
