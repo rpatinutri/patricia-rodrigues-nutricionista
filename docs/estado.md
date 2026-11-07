@@ -154,3 +154,6 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
   formulário removidos; site reconstruído e conferido.
 - 2026-11-07: faixa "Vamos começar?" removida para deixar uma única chamada de WhatsApp
   na parte de baixo; o botão fica na seção de contato, ao lado dos dados.
+- 2026-11-07: conta `tiagoj-prog` liberada como colaboradora no repositório
+  `rpatinutri/patricia-rodrigues-nutricionista`; commits do formulário e do botão único
+  enviados para a branch `main`. Netlify deve reconstruir automaticamente.
