@@ -90,7 +90,7 @@ Depois que o domínio estiver ativo:
 - [ ] Criar, editar e despublicar um artigo funciona.
 - [ ] Imagens enviadas pelo painel aparecem no site.
 - [ ] Lighthouse 100/100/100 na home, no blog e em um post.
-- [ ] Formulário do WhatsApp abre com a mensagem preenchida.
+- [ ] Botão do WhatsApp abre a conversa com a mensagem preenchida.
 
 ## Avisos importantes
 

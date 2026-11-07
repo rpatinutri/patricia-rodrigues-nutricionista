@@ -33,20 +33,20 @@ Contrato do que foi combinado. Alterações aqui devem ser combinadas antes de i
 | Seções pedidas | Sobre mim; Como funciona o atendimento; Contato |
 | Tratamento | "Você", português neutro |
 | Textos | Escritos pelo agente, a partir dos dados reais do LinkedIn enviados pelo cliente |
-| Conversão | Formulário de contato e botão de WhatsApp — (15) 99611-0107 |
+| Conversão | Botão de WhatsApp — (15) 99611-0107 (formulário removido a pedido em 2026-11-07) |
 | Atendimento | Presencial em Ibiúna/SP ou online por vídeo (confirmado em 2026-11-05) |
 | Blog | Aprovado. Área de artigos com edição pela cliente, integrada ao site (artigos próprios e comentários sobre artigos lidos). Implementado com Eleventy + Decap CMS no Netlify (login por e-mail/senha). Custo R$ 0 além do domínio. |
 | Vocabulário | Usar "agendar", nunca "marcar" (pedido em 2026-11-05) |
-| Envio do formulário | O formulário monta a mensagem e abre o WhatsApp (sem backend) |
-| Domínio / hospedagem | Não existem ainda |
+| Contato | Botão direto para o WhatsApp, sem formulário e sem backend |
+| Domínio / hospedagem | Site publicado no Netlify; domínio próprio ainda não registrado |
 | Valor da consulta | R$ 260,00 — **não publicar** (decisão do cliente) |
 
 ## Técnico (Bloco D)
 
 | Item | Resposta |
 |---|---|
-| Páginas | Uma página (landing) |
-| Tecnologia | HTML + CSS puro; JS mínimo (menu, validação, ano). Site gerado com Eleventy 3 (Nunjucks/Markdown) para permitir o blog editável; painel Decap CMS no Netlify. Cliente autoriza otimizar com outra linguagem se necessário. |
+| Páginas | Home institucional + blog (listagem e posts) |
+| Tecnologia | HTML + CSS puro; JS mínimo (menu e ano). Site gerado com Eleventy 3 (Nunjucks/Markdown) para permitir o blog editável; painel Decap CMS no Netlify. Cliente autoriza otimizar com outra linguagem se necessário. |
 
 ## Dados reais para o site (fonte: prints do LinkedIn enviados pelo cliente)
 

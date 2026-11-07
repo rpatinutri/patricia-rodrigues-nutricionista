@@ -910,7 +910,7 @@ address {
   color: var(--vinho);
 }
 
-.formulario {
+.contato__acao {
   padding: 26px 22px;
   background: var(--superficie);
   border: 1px solid var(--borda);
@@ -918,81 +918,14 @@ address {
   box-shadow: var(--sombra);
 }
 
-.formulario h3 {
-  margin-bottom: 20px;
+.contato__acao h3 {
+  margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
-.campo {
-  margin-bottom: 18px;
-}
-
-.campo label {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--tinta);
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.opcional {
+.contato__acao p {
+  margin: 0 0 22px;
   color: var(--tinta-suave);
-  font-weight: 300;
-}
-
-.campo input,
-.campo textarea {
-  width: 100%;
-  padding: 13px 15px;
-  background: var(--fundo);
-  color: var(--tinta);
-  border: 1px solid var(--borda-forte);
-  border-radius: 12px;
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.4;
-  transition: border-color var(--transicao), box-shadow var(--transicao);
-}
-
-.campo textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.campo input:hover,
-.campo textarea:hover {
-  border-color: var(--tinta-suave);
-}
-
-.campo input:focus-visible,
-.campo textarea:focus-visible {
-  outline: none;
-  border-color: var(--vinho);
-  box-shadow: 0 0 0 3px rgba(145, 37, 37, 0.18);
-}
-
-.campo input[aria-invalid="true"],
-.campo textarea[aria-invalid="true"] {
-  border-color: var(--vinho);
-}
-
-.erro {
-  margin: 6px 0 0;
-  color: var(--vinho);
-  font-size: 0.82rem;
-}
-
-.formulario__aviso {
-  margin: 14px 0 0;
-  color: var(--tinta-suave);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-
-.formulario__status {
-  margin: 12px 0 0;
-  color: var(--vinho);
-  font-size: 0.9rem;
 }
 
 /* Rodapé ----------------------------------------------------------------- */
@@ -1190,7 +1123,7 @@ address {
     align-items: start;
   }
 
-  .formulario {
+  .contato__acao {
     padding: 32px 30px;
   }
 

@@ -33,8 +33,8 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
   - Painel `/admin/` carrega o Decap CMS com login Netlify Identity (sem erros).
 - Testado em 360, 768, 912 e 1440 px, sem rolagem horizontal.
 - Lighthouse (home, blog, post): acessibilidade 100, boas práticas 100, SEO 100.
-- Formulário validado: erros em português, foco no primeiro campo inválido e link
-  `wa.me` montado corretamente (testado com dados fictícios).
+- Contato por botão direto no WhatsApp (formulário removido em 2026-11-07, a pedido
+  do cliente); o link `wa.me` abre com a mensagem pronta.
 - Menu mobile abre/fecha, fecha no Esc, no clique do link e ao passar de 900 px.
 - Cliente visualizou a prévia em 2026-11-05 e pediu para registrar o estado na memória.
 - Textos atualizados em 2026-11-05: posicionamento em saúde da mulher, "Quem sou eu" em
@@ -65,7 +65,8 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - Card "App Amplinutri" trocado por "Saúde da mulher" no "O que atendo"; o app continua
   citado no passo 3.
 - `text-wrap: balance` no `h1`/`h2`: evita a palavra órfã na última linha do título.
-- Formulário abre o WhatsApp com a mensagem montada; sem backend.
+- Sem formulário de contato: a seção de contato mostra os dados e um botão direto
+  para o WhatsApp. Menos atrito e menos campo para a cliente manter.
 - Hero sem foto. Selo aparece a partir de 640 px (240 px) e em 2 colunas a partir de 900 px.
 - Rodapé claro (não escuro) para manter o vinho legível.
 - `@charset "UTF-8"` no topo do CSS: sem ele, servidores que não informam charset
@@ -146,3 +147,6 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - 2026-11-05: blog integrado aprovado e implementado (Eleventy 3 + Decap CMS + Netlify
   Identity). Páginas home/blog/post conferidas; `/admin/` carrega o login. Lighthouse
   100/100/100 nas três. Artigo de demonstração mantido como rascunho.
+- 2026-11-07: formulário de contato removido a pedido do cliente; a seção de contato
+  agora mostra os dados e um botão direto para o WhatsApp. JS de validação e CSS do
+  formulário removidos; site reconstruído e conferido.

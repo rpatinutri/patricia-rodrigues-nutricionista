@@ -218,39 +218,13 @@ home: ""
             </dl>
           </div>
 
-          <form class="formulario" id="formulario-contato" novalidate>
-            <h3>Envie uma mensagem</h3>
-
-            <div class="campo">
-              <label for="nome">Nome</label>
-              <input id="nome" name="nome" type="text" autocomplete="name" required minlength="2" aria-describedby="erro-nome">
-              <p class="erro" id="erro-nome" data-erro-de="nome" hidden></p>
-            </div>
-
-            <div class="campo">
-              <label for="telefone">Telefone</label>
-              <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(15) 99999-9999" aria-describedby="erro-telefone">
-              <p class="erro" id="erro-telefone" data-erro-de="telefone" hidden></p>
-            </div>
-
-            <div class="campo">
-              <label for="email">E-mail <span class="opcional">(opcional)</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="erro-email">
-              <p class="erro" id="erro-email" data-erro-de="email" hidden></p>
-            </div>
-
-            <div class="campo">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="4" required minlength="10" placeholder="Conte um pouco do que você busca." aria-describedby="erro-mensagem"></textarea>
-              <p class="erro" id="erro-mensagem" data-erro-de="mensagem" hidden></p>
-            </div>
-
-            <button class="botao botao--largo" type="submit">Enviar pelo WhatsApp</button>
-            <p class="formulario__aviso">
-              Ao enviar, o WhatsApp abre com a sua mensagem já escrita. Nada é enviado sem você confirmar.
-            </p>
-            <p class="formulario__status" id="status-formulario" role="status" aria-live="polite"></p>
-          </form>
+          <div class="contato__acao">
+            <h3>Prefere falar direto?</h3>
+            <p>Me chame no WhatsApp para agendarmos a sua consulta.</p>
+            <a class="botao botao--largo" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
+              Agendar pelo WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>
