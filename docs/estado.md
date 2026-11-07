@@ -29,7 +29,7 @@ textos da home e os dados de contato pelo painel `/admin/`, sem mexer no código
 - Blog integrado implementado e conferido com artigo de demonstração (rascunho):
   - Listagem em `/blog/` com estado vazio quando não há posts publicados.
   - Post em `/blog/<slug>/` com fonte, resumo, "Meu comentário" e link de volta.
-  - Seção "Últimos artigos" e link "Artigos" no menu/rodapé aparecem só com posts
+  - Seção "Últimos assuntos" e link "Assuntos" no menu/rodapé aparecem só com posts
     publicados.
   - Painel `/admin/` carrega o Decap CMS com login Netlify Identity (sem erros).
 - Testado em 360, 768, 912 e 1440 px, sem rolagem horizontal.
@@ -83,7 +83,7 @@ textos da home e os dados de contato pelo painel `/admin/`, sem mexer no código
 ## Arquivos importantes
 
 - `src/index.njk`: home (Nunjucks) lendo os textos de `conteudo.json`; seção "Últimos
-  artigos" condicional.
+  assuntos" condicional.
 - `src/_includes/base.njk`: head/meta, cabeçalho/rodapé, nav condicional; usa `site.*`.
 - `src/_includes/post.njk`: layout do artigo (fonte, resumo, "Meu comentário", voltar).
 - `src/posts/posts.11tydata.js`: padrões dos posts, permalink, rascunho, metaTitle.
@@ -173,6 +173,8 @@ textos da home e os dados de contato pelo painel `/admin/`, sem mexer no código
   `rpatinutri/patricia-rodrigues-nutricionista`; commits do formulário e do botão único
   enviados para a branch `main`. Netlify deve reconstruir automaticamente.
 - 2026-11-07: painel ampliado para editar os textos da home e os dados de contato.
+- 2026-11-07: seção de artigos renomeada para "Assuntos" na interface (nav, home, blog
+  e painel). URL `/blog/` e nomes internos mantidos.
   Criados `src/_data/conteudo.json`, `src/_data/config.json` e `src/_data/site.js`;
   `src/index.njk` e `base.njk` passaram a ler esses dados; duas novas coleções no
   `admin/config.yml`. Testado com o backend local do Decap: formulário preenchido,

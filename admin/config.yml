@@ -9,9 +9,9 @@ public_folder: "/assets/img/blog"
 
 collections:
   - name: "posts"
-    label: "Artigos"
-    label_singular: "Artigo"
-    description: "Textos próprios e comentários sobre artigos que você leu."
+    label: "Assuntos"
+    label_singular: "Assunto"
+    description: "Textos próprios e comentários sobre assuntos que você leu."
     folder: "src/posts"
     create: true
     slug: "{{slug}}"
@@ -36,9 +36,9 @@ collections:
         name: "tipo"
         widget: "select"
         options:
-          - "Artigo comentado"
+          - "Assunto comentado"
           - "Texto próprio"
-        default: "Artigo comentado"
+        default: "Assunto comentado"
 
       - label: "Rascunho (não publicar)"
         name: "draft"
@@ -50,7 +50,7 @@ collections:
         name: "fonte"
         widget: "string"
         required: false
-        hint: "Só para artigos comentados. Ex.: Revista Veja, PubMed, Jornal da USP."
+        hint: "Só para assuntos comentados. Ex.: Revista Veja, PubMed, Jornal da USP."
 
       - label: "Link da fonte"
         name: "fonte_url"
@@ -58,7 +58,7 @@ collections:
         required: false
         hint: "Endereço completo, começando com https://"
 
-      - label: "Resumo do artigo"
+      - label: "Resumo do assunto"
         name: "resumo"
         widget: "text"
         required: false
@@ -73,7 +73,7 @@ collections:
       - label: "Comentário"
         name: "body"
         widget: "markdown"
-        hint: "Seu texto. Para artigos comentados, é o que você achou do artigo."
+        hint: "Seu texto. Para assuntos comentados, é o que você achou do assunto."
 
   - name: "pagina_inicial"
     label: "Página inicial"
@@ -194,7 +194,7 @@ collections:
                     name: "texto"
                     widget: "text"
 
-          - label: "Seção de artigos"
+          - label: "Seção de assuntos"
             name: "artigos"
             widget: "object"
             fields:

@@ -65,7 +65,7 @@ Importante: o arquivo netlify.toml já está na raiz e define o build.
 4. Preencha título, data, tipo, resumo e o comentário.
 5. Deixe Rascunho marcado para testar sem publicar.
 6. Salve. O artigo deve aparecer na listagem do painel.
-7. Desmarque Rascunho e salve: em 1 a 2 minutos o artigo aparece no site e na seção Últimos artigos da home.
+7. Desmarque Rascunho e salve: em 1 a 2 minutos o assunto aparece no site e na seção Últimos assuntos da home.
 8. Abra **Página inicial** e confira se os textos da home carregam preenchidos. Edite uma frase, clique em Publicar > Publicar agora e aguarde o deploy.
 9. Abra **Configurações** e confira telefone, WhatsApp, endereço e horário. Alterações aqui valem para o site inteiro.
 
