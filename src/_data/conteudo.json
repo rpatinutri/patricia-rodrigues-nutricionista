@@ -13,19 +13,37 @@
     "olho": "Quem sou eu",
     "titulo": "Cada plano começa pelo que já existe na sua rotina",
     "paragrafos": [
-      { "texto": "Olá, eu sou a Patricia Rodrigues, nutricionista (CRN 84548/P) com foco em saúde da mulher. Acompanho mulheres em cada fase da vida, com um olhar cuidadoso para a sua rotina, seu corpo e seus objetivos — sem dietas genéricas e sem terrorismo alimentar." },
-      { "texto": "Atendo em Ibiúna desde 2023 e recebo também homens, com foco em emagrecimento, hipertrofia e reeducação alimentar. Meu trabalho parte do que você já come, de onde come e de quanto tempo tem. O plano nasce dessa realidade — não de uma lista pronta." },
-      { "texto": "Sou graduada em Nutrição pela Cruzeiro do Sul Virtual (2020–2023) e pós-graduada em Nutrição Clínica pelo Pratiensino (2024–2026). Também atuo como responsável técnica na Casa de Santa Rita, instituição de longa permanência para idosos, e passei pelo Hospital e Maternidade São Francisco, em São Roque." }
+      {
+        "texto": "Olá, eu sou a Patricia Rodrigues, nutricionista (CRN 84548/P) com foco em saúde da mulher. Acompanho mulheres em cada fase da vida, com um olhar cuidadoso para a sua rotina, seu corpo e seus objetivos — sem dietas genéricas e sem terrorismo alimentar."
+      },
+      {
+        "texto": "Atendo em Ibiúna desde 2023 e recebo também homens, com foco em emagrecimento, hipertrofia e reeducação alimentar. Meu trabalho parte do que você já come, de onde come e de quanto tempo tem. O plano nasce dessa realidade — não de uma lista pronta."
+      },
+      {
+        "texto": "Sou graduada em Nutrição pela Cruzeiro do Sul Virtual (2020–2023) e pós-graduada em Nutrição Clínica pelo Pratiensino (2024–2026). Também atuo como responsável técnica na Casa de Santa Rita, instituição de longa permanência para idosos, e passei pelo Hospital e Maternidade São Francisco, em São Roque."
+      }
     ],
     "assinatura": "Patricia Rodrigues",
     "cartaoTitulo": "Formação e experiência",
     "credenciais": [
-      { "item": "CRN 84548/P" },
-      { "item": "Graduação em Nutrição — Cruzeiro do Sul Virtual (2020–2023)" },
-      { "item": "Pós-graduação em Nutrição Clínica — Pratiensino (2024–2026)" },
-      { "item": "Responsável técnica — Casa de Santa Rita (ILPI), desde 2024" },
-      { "item": "Nutricionista clínica — Hospital e Maternidade São Francisco (2024–2025)" },
-      { "item": "Atendimento autônomo desde 2023" }
+      {
+        "item": "CRN 84548/P"
+      },
+      {
+        "item": "Graduação em Nutrição — Cruzeiro do Sul Virtual (2020–2023)"
+      },
+      {
+        "item": "Pós-graduação em Nutrição Clínica — Pratiensino (2024–2026)"
+      },
+      {
+        "item": "Responsável técnica — Casa de Santa Rita (ILPI), desde 2024"
+      },
+      {
+        "item": "Nutricionista clínica — Hospital e Maternidade São Francisco (2024–2025)"
+      },
+      {
+        "item": "Atendimento autônomo desde 2023"
+      }
     ]
   },
   "atendimento": {
@@ -85,7 +103,7 @@
     ]
   },
   "artigos": {
-    "olho": "Artigos",
+    "olho": "Assuntos",
     "titulo": "Leituras e comentários",
     "linha": "O que eu leio, o que penso sobre isso e como isso chega no dia a dia."
   },
