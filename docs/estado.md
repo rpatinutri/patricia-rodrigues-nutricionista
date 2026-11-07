@@ -1,11 +1,12 @@
 # Patricia Rodrigues Nutricionista — estado do trabalho
 
-Atualizado: 2026-11-05
+Atualizado: 2026-11-07
 
 ## Objetivo
 
 Site institucional de uma página para nutricionista em Ibiúna/SP, com foco em gerar
-contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
+contato por WhatsApp. Tom acolhedor e profissional, tema claro. A cliente edita os
+textos da home e os dados de contato pelo painel `/admin/`, sem mexer no código.
 
 ## Escopo
 
@@ -35,6 +36,10 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - Lighthouse (home, blog, post): acessibilidade 100, boas práticas 100, SEO 100.
 - Contato por botão direto no WhatsApp (formulário removido em 2026-11-07, a pedido
   do cliente); o link `wa.me` abre com a mensagem pronta.
+- **Painel `/admin/` com três coleções**: Artigos, Página inicial (textos da home) e
+  Configurações (telefone, WhatsApp, endereço, horário e URL do site). Testado com o
+  backend local do Decap: os campos carregam preenchidos, a edição é salva e o JSON
+  mantém a estrutura (listas de parágrafos, credenciais, passos, modalidades e serviços).
 - Menu mobile abre/fecha, fecha no Esc, no clique do link e ao passar de 900 px.
 - Cliente visualizou a prévia em 2026-11-05 e pediu para registrar o estado na memória.
 - Textos atualizados em 2026-11-05: posicionamento em saúde da mulher, "Quem sou eu" em
@@ -52,8 +57,9 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - Assinatura horizontal (`marca d aggua-02.png`) não usada: texto off-white, invisível
   no fundo claro. Cabeçalho usa o monograma (`-03`) + nome em tipografia.
 - Preço não publicado (decisão do cliente).
-- Linguagem neutra em gênero: a chamada final diz "Vamos começar?" (antes "Pronta para
-  começar?"), porque o atendimento é para homens e mulheres.
+- Linguagem neutra em gênero: a chamada final dizia "Vamos começar?" (antes "Pronta para
+  começar?"), porque o atendimento é para homens e mulheres. Em 2026-11-07 a faixa foi
+  removida; resta a chamada única "Prefere falar direto?" na seção de contato.
 - Posicionamento (2026-11-05): "Nutrição para a saúde da mulher, em cada fase da vida" no
   `h1`, no `<title>` e na meta description. Homens continuam citados em "Quem sou eu" e
   no "O que atendo" (nada de linguagem que os exclua).
@@ -76,32 +82,39 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 
 ## Arquivos importantes
 
-- `src/index.njk`: home (Nunjucks), inclui seção "Últimos artigos" condicional.
-- `src/_includes/base.njk`: head/meta, cabeçalho/rodapé, nav condicional, convite Netlify Identity.
+- `src/index.njk`: home (Nunjucks) lendo os textos de `conteudo.json`; seção "Últimos
+  artigos" condicional.
+- `src/_includes/base.njk`: head/meta, cabeçalho/rodapé, nav condicional; usa `site.*`.
 - `src/_includes/post.njk`: layout do artigo (fonte, resumo, "Meu comentário", voltar).
 - `src/posts/posts.11tydata.js`: padrões dos posts, permalink, rascunho, metaTitle.
 - `src/posts/modelo-artigo-comentado.md`: artigo de demonstração (rascunho).
 - `src/blog/index.njk`: listagem do blog com estado vazio.
-- `eleventy.config.js`: filtros `dataBR`/`limite`, coleção `postsPublicados`, passthrough.
-- `admin/index.html` e `admin/config.yml`: painel Decap CMS.
+- `eleventy.config.js`: filtros `dataBR`/`limite`/`urlencode`, coleção `postsPublicados`,
+  passthrough.
+- `admin/index.html` e `admin/config.yml`: painel Decap CMS com as coleções Artigos,
+  Página inicial e Configurações.
 - `netlify.toml`: build `npm run build`, publish `_site`, Node 22.
 - `assets/css/estilo.css`: tokens da paleta + blocos `.artigos`, `.artigo-card`, `.post*`.
-- `assets/js/script.js`: menu, validação e link do WhatsApp.
+- `assets/js/script.js`: menu mobile e ano do rodapé (sem formulário).
 - `assets/img/logo-selo.webp` (480 px): selo circular — abertura.
 - `assets/img/logo-simbodo.webp` (160 px): monograma — cabeçalho e rodapé.
 - `assets/img/padrao-pr.webp` (420 px, 87 KB): textura da abertura a 5% de opacidade.
 - `assets/img/favicon-32.png`, `assets/img/apple-touch-icon.png`.
-- `src/_data/site.json`: telefone, WhatsApp, endereço, `siteUrl` (placeholder até o domínio).
+- `src/_data/conteudo.json`: textos editáveis da home (abertura, sobre, atendimento,
+  artigos e contato).
+- `src/_data/config.json`: nome, CRN, telefone, WhatsApp, endereço, horário e `siteUrl`
+  (placeholder até o domínio).
+- `src/_data/site.js`: lê `config.json` e monta `telefoneLink` e `whatsapp`.
 - Originais do cliente (`marca d aggua-*.png`, `Logotipo-*.jpg`, `1779754621338.jpg`)
   permanecem intactos na raiz.
-- `index.html` na raiz é o arquivo antigo, não usado após a migração; pode ser removido
-  quando o cliente confirmar. A fonte agora é `src/`.
+- A fonte do site é `src/`; o `index.html` antigo da raiz foi removido.
 
 ## Próximo passo
 
-1. Cliente criar as contas no Netlify e no GitHub (no nome dela) e convidar o agente.
-2. Seguir `docs/publicar.md` (passo a passo de publicação, Identity, Git Gateway e domínio).
-3. Cliente enviar o primeiro artigo real para substituir o modelo de demonstração.
+1. Registrar o domínio `.com.br` e apontar para o Netlify (ver `docs/publicar.md`).
+2. Depois do domínio ativo, atualizar "Endereço do site (URL)" em `/admin/` >
+   Configurações.
+3. Substituir o artigo de demonstração pelo primeiro artigo real.
 4. Revisar os textos de "Quem sou eu" e "Como funciona a consulta".
 
 ## Pendências
@@ -110,11 +123,12 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - [x] Lista de condições (SOP, endometriose, gestação, pós-parto, menopausa): cliente
       decidiu deixar o texto como está, sem a lista (2026-11-05).
 - [x] Blog/artigos com edição pela cliente: implementado (Eleventy + Decap CMS).
+- [x] Textos da home e dados de contato editáveis pelo painel: implementado e testado.
+- [x] Publicação no Netlify: site no ar em endereço temporário `.netlify.app`.
 - [ ] Primeiro artigo real da cliente (o modelo de demonstração deve ser apagado).
 - [ ] Foto em alta resolução, se o cliente quiser usar mais tarde (a atual tem 200x200 px).
-- [ ] Domínio e hospedagem: criar contas e publicar (ver `docs/publicar.md`).
+- [ ] Domínio próprio: registrar no Registro.br e configurar no Netlify.
 - [ ] Instagram: cliente não possui.
-- [ ] Limpeza opcional: remover o `index.html` antigo da raiz (a fonte agora é `src/`).
 
 ## Publicação
 
@@ -122,6 +136,7 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - Caminho escolhido: Netlify + Decap CMS + Netlify Identity (git-gateway). Custo R$ 0
   além do domínio; domínio `.com.br` R$ 40/ano no Registro.br.
 - GitHub Pages descartado pela cláusula de uso comercial na documentação oficial.
+- Publicado no Netlify em endereço temporário; domínio próprio ainda pendente.
 - Passo a passo completo em `docs/publicar.md`.
 
 ## Histórico
@@ -157,3 +172,9 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - 2026-11-07: conta `tiagoj-prog` liberada como colaboradora no repositório
   `rpatinutri/patricia-rodrigues-nutricionista`; commits do formulário e do botão único
   enviados para a branch `main`. Netlify deve reconstruir automaticamente.
+- 2026-11-07: painel ampliado para editar os textos da home e os dados de contato.
+  Criados `src/_data/conteudo.json`, `src/_data/config.json` e `src/_data/site.js`;
+  `src/index.njk` e `base.njk` passaram a ler esses dados; duas novas coleções no
+  `admin/config.yml`. Testado com o backend local do Decap: formulário preenchido,
+  edição salva e estrutura do JSON preservada; home conferida em 360/768/1440 px e
+  Lighthouse 100/100/100 na home, no blog e no post.

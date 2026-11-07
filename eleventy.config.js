@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
     Array.isArray(lista) ? lista.slice(0, quantidade) : []
   );
 
+  eleventyConfig.addFilter("urlencode", (valor) =>
+    encodeURIComponent(valor || "")
+  );
+
   /* Artigos publicados, do mais novo para o mais antigo. Rascunhos ficam fora. */
   eleventyConfig.addCollection("postsPublicados", (api) =>
     api

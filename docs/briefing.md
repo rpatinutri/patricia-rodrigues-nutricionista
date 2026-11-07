@@ -1,6 +1,7 @@
 # Briefing — Patricia Rodrigues Nutricionista
 
 Registrado em: 2026-11-05
+Atualizado em: 2026-11-07
 Contrato do que foi combinado. Alterações aqui devem ser combinadas antes de ir ao código.
 
 ## Identidade (Bloco A)
@@ -20,7 +21,7 @@ Contrato do que foi combinado. Alterações aqui devem ser combinadas antes de i
 |---|---|
 | Tema | Claro |
 | Tom | Acolhedor + profissional |
-| Referências | physicus.com.br (estrutura: header com CTA, abertura, cards, sobre, formulário, rodapé em colunas); Poytara (respiro das seções e hierarquia de títulos — sem reutilizar a paleta verde/preto); siteinspire (galeria, usada só como calibragem) |
+| Referências | physicus.com.br (estrutura: header com CTA, abertura, cards, sobre, seção de contato e rodapé em colunas); Poytara (respiro das seções e hierarquia de títulos — sem reutilizar a paleta verde/preto); siteinspire (galeria, usada só como calibragem) |
 | Fotos | Sem foto no hero (autorizado). Retrato existente tem 200x200 px, insuficiente para uso grande. Banco de imagens dispensado. |
 | Cores do kit | `#f4f2f2` (off-white), `#8ca296` (verde sálvia), `#912525` (vinho) |
 | Tipografia do kit | Autography (manuscrita) + Modern sans light |
@@ -36,6 +37,7 @@ Contrato do que foi combinado. Alterações aqui devem ser combinadas antes de i
 | Conversão | Botão de WhatsApp — (15) 99611-0107 (formulário removido a pedido em 2026-11-07) |
 | Atendimento | Presencial em Ibiúna/SP ou online por vídeo (confirmado em 2026-11-05) |
 | Blog | Aprovado. Área de artigos com edição pela cliente, integrada ao site (artigos próprios e comentários sobre artigos lidos). Implementado com Eleventy + Decap CMS no Netlify (login por e-mail/senha). Custo R$ 0 além do domínio. |
+| Edição do site | A cliente edita os textos da home e os dados de contato (telefone, WhatsApp, endereço, horário) pelo painel `/admin/`, sem tocar no código. Implementado em 2026-11-07 com as coleções "Página inicial" e "Configurações". |
 | Vocabulário | Usar "agendar", nunca "marcar" (pedido em 2026-11-05) |
 | Contato | Botão direto para o WhatsApp, sem formulário e sem backend |
 | Domínio / hospedagem | Site publicado no Netlify; domínio próprio ainda não registrado |
@@ -66,7 +68,7 @@ Contrato do que foi combinado. Alterações aqui devem ser combinadas antes de i
 ## Fora do escopo
 
 - Publicar preço.
-- Área de login, catálogo (fora do escopo do site institucional).
+- Área de login para pacientes e catálogo (o login do `/admin/` é só da cliente).
 - Blog: implementado como parte da entrega (ver acima). A edição é feita pela cliente no painel; a publicação dispara a reconstrução do site.
-- Domínio e hospedagem (cliente ainda não tem; entrega em arquivos estáticos).
+- Domínio próprio: ainda não registrado; o site já está publicado no Netlify.
 - Uso de imagem gerada por IA ou banco de imagens.

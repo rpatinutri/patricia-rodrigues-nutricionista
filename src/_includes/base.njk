@@ -29,10 +29,10 @@
 
   <header class="cabecalho">
     <div class="cabecalho__interno">
-      <a class="marca" href="{{ home }}#inicio" aria-label="Patricia Rodrigues Nutricionista — início">
+      <a class="marca" href="{{ home }}#inicio" aria-label="{{ site.nome }} Nutricionista — início">
         <img src="{{ assetBase }}assets/img/logo-simbolo.webp" alt="" width="160" height="160">
         <span>
-          <span class="marca__nome">Patricia Rodrigues</span>
+          <span class="marca__nome">{{ site.nome }}</span>
           <span class="marca__descritivo">Nutricionista</span>
         </span>
       </a>
@@ -68,7 +68,7 @@
       <div class="rodape__marca">
         <img src="{{ assetBase }}assets/img/logo-simbolo.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
         <p>
-          <span class="rodape__nome">Patricia Rodrigues</span>
+          <span class="rodape__nome">{{ site.nome }}</span>
           <span class="rodape__descritivo">Nutricionista · CRN {{ site.crn }}</span>
         </p>
       </div>
@@ -83,14 +83,14 @@
       </nav>
 
       <address class="rodape__endereco">
-        Rua 15 de Novembro, Nº 15 — Centro<br>
-        Ibiúna/SP · 18150-045<br>
+        {{ site.endereco }}<br>
+        {{ site.enderecoComplemento }}<br>
         <a href="{{ site.telefoneLink }}" target="_blank" rel="noopener">{{ site.telefone }}</a>
       </address>
     </div>
 
     <div class="rodape__base">
-      <p>© <span id="ano">2026</span> Patricia Rodrigues Nutricionista. Todos os direitos reservados.</p>
+      <p>© <span id="ano">2026</span> {{ site.nome }} Nutricionista. Todos os direitos reservados.</p>
       <p>Site institucional · atendimento com horário agendado</p>
     </div>
   </footer>

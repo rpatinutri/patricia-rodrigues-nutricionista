@@ -61,11 +61,13 @@ Importante: o arquivo netlify.toml já está na raiz e define o build.
 
 1. Acesse https://seu-site.netlify.app/admin/.
 2. Faça login com o e-mail e a senha da cliente.
-3. Clique em Novo Artigo.
+3. Clique em **＋ Artigo** (Novo Artigo).
 4. Preencha título, data, tipo, resumo e o comentário.
 5. Deixe Rascunho marcado para testar sem publicar.
 6. Salve. O artigo deve aparecer na listagem do painel.
 7. Desmarque Rascunho e salve: em 1 a 2 minutos o artigo aparece no site e na seção Últimos artigos da home.
+8. Abra **Página inicial** e confira se os textos da home carregam preenchidos. Edite uma frase, clique em Publicar > Publicar agora e aguarde o deploy.
+9. Abra **Configurações** e confira telefone, WhatsApp, endereço e horário. Alterações aqui valem para o site inteiro.
 
 ## 7. Domínio próprio (.com.br)
 
@@ -79,15 +81,17 @@ Importante: o arquivo netlify.toml já está na raiz e define o build.
 
 Depois que o domínio estiver ativo:
 
-1. Abra src/_data/site.json.
-2. Troque siteUrl para https://patriciarodriguesnutri.com.br (ou o domínio escolhido).
-3. Faça commit/push. O Netlify reconstrói o site e as imagens dos artigos passam a ter endereço absoluto correto.
+1. Acesse `/admin/` e abra **Configurações** > **Dados do site**.
+2. No campo "Endereço do site (URL)", troque pelo domínio definitivo (ex.: https://patriciarodriguesnutri.com.br).
+3. Clique em Publicar > Publicar agora. O Netlify reconstrói o site e as imagens dos artigos passam a ter endereço absoluto correto.
 
 ## 9. Checklist final
 
 - [ ] Site abre no domínio com HTTPS.
 - [ ] /admin/ abre o painel e o login funciona.
 - [ ] Criar, editar e despublicar um artigo funciona.
+- [ ] Editar um texto em Página inicial funciona e aparece no site após o deploy.
+- [ ] Editar telefone ou endereço em Configurações atualiza o site inteiro.
 - [ ] Imagens enviadas pelo painel aparecem no site.
 - [ ] Lighthouse 100/100/100 na home, no blog e em um post.
 - [ ] Botão do WhatsApp abre a conversa com a mensagem preenchida.
@@ -105,4 +109,5 @@ Depois que o domínio estiver ativo:
 - Painel não carrega: confira se o Git Gateway está ativo e se o branch é main.
 - Login não abre: confira se o Netlify Identity está ativo e se o convite foi aceito.
 - Imagem não aparece: confira se a pasta assets/img/blog foi criada no repositório após o upload.
+- Texto da home ou dado de contato não atualiza: confira se clicou em Publicar > Publicar agora e se o último deploy no Netlify terminou como Published.
 - Build falha no Netlify: veja o log em Deploys; a causa mais comum é Node version diferente de 22.

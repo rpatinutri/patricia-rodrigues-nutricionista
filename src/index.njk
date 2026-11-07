@@ -10,22 +10,19 @@ home: ""
     <section class="abertura" id="inicio" aria-labelledby="titulo-abertura">
       <div class="abertura__interno">
         <div class="abertura__texto">
-          <p class="olho">Nutricionista clínica · CRN 84548/P</p>
-          <h1 id="titulo-abertura">Nutrição para a <span class="destaque">saúde da mulher</span>, em cada fase da vida.</h1>
+          <p class="olho">{{ conteudo.abertura.olho }} · CRN {{ site.crn }}</p>
+          <h1 id="titulo-abertura">{{ conteudo.abertura.tituloInicio }} <span class="destaque">{{ conteudo.abertura.tituloDestaque }}</span>{{ conteudo.abertura.tituloFim }}</h1>
           <p class="abertura__linha">
-            Nutrição é mais combinação, adequação e inclusão. Atendimento acolhedor e
-            individualizado, com escuta ativa e um plano alimentar que respeita a sua rotina
-            e a sua realidade.
+            {{ conteudo.abertura.linha }}
           </p>
           <div class="abertura__acoes">
             <a class="botao" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
-              Agendar pelo WhatsApp
+              {{ conteudo.abertura.botao }}
             </a>
-            <a class="link-seta" href="#atendimento">Como funciona a consulta</a>
+            <a class="link-seta" href="#atendimento">{{ conteudo.abertura.linkSecundario }}</a>
           </div>
           <p class="abertura__local">
-            Presencial em Ibiúna/SP ou online por vídeo<br>
-            segunda a sexta, das 9h às 18h, com horário agendado
+            {{ conteudo.abertura.local }}
           </p>
         </div>
 
@@ -40,42 +37,24 @@ home: ""
     <section class="secao" id="sobre" aria-labelledby="titulo-sobre">
       <div class="secao__interno">
         <div class="secao__cabecalho">
-          <p class="olho">Quem sou eu</p>
-          <h2 id="titulo-sobre">Cada plano começa pelo que já existe na sua rotina</h2>
+          <p class="olho">{{ conteudo.sobre.olho }}</p>
+          <h2 id="titulo-sobre">{{ conteudo.sobre.titulo }}</h2>
         </div>
 
         <div class="sobre">
           <div class="sobre__texto">
-            <p>
-              Olá, eu sou a Patricia Rodrigues, nutricionista (CRN 84548/P) com foco em saúde
-              da mulher. Acompanho mulheres em cada fase da vida, com um olhar cuidadoso para
-              a sua rotina, seu corpo e seus objetivos — sem dietas genéricas e sem terrorismo
-              alimentar.
-            </p>
-            <p>
-              Atendo em Ibiúna desde 2023 e recebo também homens, com foco em emagrecimento,
-              hipertrofia e reeducação alimentar. Meu trabalho parte do que você já come, de
-              onde come e de quanto tempo tem. O plano nasce dessa realidade — não de uma lista
-              pronta.
-            </p>
-            <p>
-              Sou graduada em Nutrição pela Cruzeiro do Sul Virtual (2020–2023) e pós-graduada em
-              Nutrição Clínica pelo Pratiensino (2024–2026). Também atuo como responsável técnica
-              na Casa de Santa Rita, instituição de longa permanência para idosos, e passei pelo
-              Hospital e Maternidade São Francisco, em São Roque.
-            </p>
-            <p class="sobre__assinatura">Patricia Rodrigues</p>
+            {% for paragrafo in conteudo.sobre.paragrafos %}
+            <p>{{ paragrafo.texto }}</p>
+            {% endfor %}
+            <p class="sobre__assinatura">{{ conteudo.sobre.assinatura }}</p>
           </div>
 
           <div class="cartao">
-            <h3>Formação e experiência</h3>
+            <h3>{{ conteudo.sobre.cartaoTitulo }}</h3>
             <ul class="lista-credenciais">
-              <li>CRN 84548/P</li>
-              <li>Graduação em Nutrição — Cruzeiro do Sul Virtual (2020–2023)</li>
-              <li>Pós-graduação em Nutrição Clínica — Pratiensino (2024–2026)</li>
-              <li>Responsável técnica — Casa de Santa Rita (ILPI), desde 2024</li>
-              <li>Nutricionista clínica — Hospital e Maternidade São Francisco (2024–2025)</li>
-              <li>Atendimento autônomo desde 2023</li>
+              {% for credencial in conteudo.sobre.credenciais %}
+              <li>{{ credencial.item }}</li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -86,50 +65,37 @@ home: ""
     <section class="secao secao--faixa" id="atendimento" aria-labelledby="titulo-atendimento">
       <div class="secao__interno">
         <div class="secao__cabecalho">
-          <p class="olho">Atendimento</p>
-          <h2 id="titulo-atendimento">Como funciona a consulta</h2>
+          <p class="olho">{{ conteudo.atendimento.olho }}</p>
+          <h2 id="titulo-atendimento">{{ conteudo.atendimento.titulo }}</h2>
           <p class="secao__linha">
-            Do primeiro contato ao acompanhamento, tudo é pensado para caber na sua vida real.
+            {{ conteudo.atendimento.linha }}
           </p>
         </div>
 
         <ol class="passos">
+          {% for passo in conteudo.atendimento.passos %}
           <li class="passo">
-            <span class="passo__numero" aria-hidden="true">1</span>
-            <h3>Conversa</h3>
-            <p>Conversamos sobre a sua história, a sua rotina e as suas queixas.</p>
+            <span class="passo__numero" aria-hidden="true">{{ loop.index }}</span>
+            <h3>{{ passo.titulo }}</h3>
+            <p>{{ passo.texto }}</p>
           </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">2</span>
-            <h3>Plano possível</h3>
-            <p>Montamos um plano possível de seguir no dia a dia, com alimentos que você gosta e que cabem na sua rotina.</p>
-          </li>
-          <li class="passo">
-            <span class="passo__numero" aria-hidden="true">3</span>
-            <h3>Acompanhamento</h3>
-            <p>Acompanhamos a sua evolução e ajustamos o que for preciso. Você também acompanha o plano pelo app Amplinutri.</p>
-          </li>
+          {% endfor %}
         </ol>
 
         <ul class="modalidades">
+          {% for modalidade in conteudo.atendimento.modalidades %}
           <li class="modalidade">
-            <span class="modalidade__rotulo">Presencial</span>
-            <span class="modalidade__texto">Rua 15 de Novembro, Nº 15 — Centro, Ibiúna/SP</span>
+            <span class="modalidade__rotulo">{{ modalidade.rotulo }}</span>
+            <span class="modalidade__texto">{{ modalidade.texto }}</span>
           </li>
-          <li class="modalidade">
-            <span class="modalidade__rotulo">Online</span>
-            <span class="modalidade__texto">Por vídeo, de onde você estiver</span>
-          </li>
+          {% endfor %}
         </ul>
 
-        <h3 class="subtitulo">O que atendo</h3>
+        <h3 class="subtitulo">{{ conteudo.atendimento.servicosTitulo }}</h3>
         <ul class="servicos">
-          <li class="servico"><h4>Saúde da mulher</h4><p>Acompanhamento nutricional em cada fase da vida.</p></li>
-          <li class="servico"><h4>Emagrecimento</h4><p>Perda de peso com saúde, respeitando o seu ritmo.</p></li>
-          <li class="servico"><h4>Hipertrofia</h4><p>Alimentação que sustenta o treino e o ganho de massa muscular.</p></li>
-          <li class="servico"><h4>Reeducação alimentar</h4><p>Mudança de hábito gradual, sem proibições.</p></li>
-          <li class="servico"><h4>Avaliação física</h4><p>Medidas e composição corporal para acompanhar a evolução.</p></li>
-          <li class="servico"><h4>Plano personalizado</h4><p>Feito para a sua rotina, suas preferências e sua realidade.</p></li>
+          {% for servico in conteudo.atendimento.servicos %}
+          <li class="servico"><h4>{{ servico.titulo }}</h4><p>{{ servico.texto }}</p></li>
+          {% endfor %}
         </ul>
       </div>
     </section>
@@ -139,10 +105,10 @@ home: ""
     <section class="secao" id="artigos" aria-labelledby="titulo-artigos">
       <div class="secao__interno">
         <div class="secao__cabecalho">
-          <p class="olho">Artigos</p>
-          <h2 id="titulo-artigos">Leituras e comentários</h2>
+          <p class="olho">{{ conteudo.artigos.olho }}</p>
+          <h2 id="titulo-artigos">{{ conteudo.artigos.titulo }}</h2>
           <p class="secao__linha">
-            O que eu leio, o que penso sobre isso e como isso chega no dia a dia.
+            {{ conteudo.artigos.linha }}
           </p>
         </div>
 
@@ -173,8 +139,8 @@ home: ""
     <section class="secao" id="contato" aria-labelledby="titulo-contato">
       <div class="secao__interno">
         <div class="secao__cabecalho">
-          <p class="olho">Contato</p>
-          <h2 id="titulo-contato">Vamos agendar a sua consulta</h2>
+          <p class="olho">{{ conteudo.contato.olho }}</p>
+          <h2 id="titulo-contato">{{ conteudo.contato.titulo }}</h2>
         </div>
 
         <div class="contato">
@@ -187,31 +153,31 @@ home: ""
               <div class="dados__item">
                 <dt>Endereço</dt>
                 <dd>
-                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+15+de+Novembro+15+Centro+Ibi%C3%BAna+SP+18150045" target="_blank" rel="noopener">
-                    Rua 15 de Novembro, Nº 15 — Centro<br>Ibiúna/SP · 18150-045
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query={{ site.endereco | urlencode }}" target="_blank" rel="noopener">
+                    {{ site.endereco }}<br>{{ site.enderecoComplemento }}
                   </a>
                 </dd>
               </div>
               <div class="dados__item">
                 <dt>Horário</dt>
-                <dd>Segunda a sexta, das 9h às 18h<br>com horário agendado</dd>
+                <dd>{{ site.horario }}<br>{{ site.horarioObs }}</dd>
               </div>
               <div class="dados__item">
                 <dt>Online</dt>
-                <dd>Por vídeo, com horário agendado</dd>
+                <dd>{{ site.online }}</dd>
               </div>
               <div class="dados__item">
                 <dt>Registro</dt>
-                <dd>CRN 84548/P</dd>
+                <dd>CRN {{ site.crn }}</dd>
               </div>
             </dl>
           </div>
 
           <div class="contato__acao">
-            <h3>Prefere falar direto?</h3>
-            <p>Me chame no WhatsApp para agendarmos a sua consulta.</p>
+            <h3>{{ conteudo.contato.acaoTitulo }}</h3>
+            <p>{{ conteudo.contato.acaoTexto }}</p>
             <a class="botao botao--largo" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
-              Agendar pelo WhatsApp
+              {{ conteudo.contato.acaoBotao }}
             </a>
           </div>
         </div>
