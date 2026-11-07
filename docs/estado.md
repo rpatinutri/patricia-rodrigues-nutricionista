@@ -67,6 +67,8 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - `text-wrap: balance` no `h1`/`h2`: evita a palavra órfã na última linha do título.
 - Sem formulário de contato: a seção de contato mostra os dados e um botão direto
   para o WhatsApp. Menos atrito e menos campo para a cliente manter.
+- Uma única chamada de WhatsApp na parte de baixo da página: a faixa "Vamos começar?"
+  foi removida para não repetir o botão que já existe na seção de contato (2026-11-07).
 - Hero sem foto. Selo aparece a partir de 640 px (240 px) e em 2 colunas a partir de 900 px.
 - Rodapé claro (não escuro) para manter o vinho legível.
 - `@charset "UTF-8"` no topo do CSS: sem ele, servidores que não informam charset
@@ -150,3 +152,5 @@ contato por WhatsApp e formulário. Tom acolhedor e profissional, tema claro.
 - 2026-11-07: formulário de contato removido a pedido do cliente; a seção de contato
   agora mostra os dados e um botão direto para o WhatsApp. JS de validação e CSS do
   formulário removidos; site reconstruído e conferido.
+- 2026-11-07: faixa "Vamos começar?" removida para deixar uma única chamada de WhatsApp
+  na parte de baixo; o botão fica na seção de contato, ao lado dos dados.
