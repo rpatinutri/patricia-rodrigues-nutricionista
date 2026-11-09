@@ -4,31 +4,23 @@
     "tituloInicio": "Nutrição para a",
     "tituloDestaque": "saúde da mulher",
     "tituloFim": ", em cada fase da vida.",
-    "linha": "Nutrição é mais combinação, adequação e inclusão. Atendimento acolhedor e individualizado, com escuta ativa e um plano alimentar que respeita a sua rotina e a sua realidade.",
+    "linha": "Nutrição é combinação, adequação e inclusão.\nAtendimento acolhedor e individualizado, com escuta ativa e um plano alimentar que respeita a sua rotina e a sua realidade.",
     "botao": "Agendar pelo WhatsApp",
     "linkSecundario": "Como funciona a consulta",
-    "local": "Presencial em Ibiúna/SP ou online por vídeo\nsegunda a sexta, das 9h às 18h, com horário agendado"
+    "local": "Presencial em Ibiúna/SP ou online por vídeo chamada.\nsegunda a sexta, das 9h às 18h, com horário agendado"
   },
   "sobre": {
     "olho": "Quem sou eu",
     "titulo": "Cada plano começa pelo que já existe na sua rotina",
     "paragrafos": [
-      {
-        "texto": "Olá, eu sou a Patricia Rodrigues, nutricionista (CRN 84548/P) com foco em saúde da mulher. Acompanho mulheres em cada fase da vida, com um olhar cuidadoso para a sua rotina, seu corpo e seus objetivos — sem dietas genéricas e sem terrorismo alimentar."
-      },
-      {
-        "texto": "Atendo em Ibiúna desde 2023 e recebo também homens, com foco em emagrecimento, hipertrofia e reeducação alimentar. Meu trabalho parte do que você já come, de onde come e de quanto tempo tem. O plano nasce dessa realidade — não de uma lista pronta."
-      },
-      {
-        "texto": "Sou graduada em Nutrição pela Cruzeiro do Sul Virtual (2020–2023) e pós-graduada em Nutrição Clínica pelo Pratiensino (2024–2026). Também atuo como responsável técnica na Casa de Santa Rita, instituição de longa permanência para idosos, e passei pelo Hospital e Maternidade São Francisco, em São Roque."
-      }
+      "Olá, eu sou a Patricia Rodrigues, nutricionista (CRN3 84548) com foco em saúde da mulher. Acompanho mulheres em cada fase da vida, com um olhar cuidadoso para a sua rotina, seu corpo e seus objetivos — sem dietas genéricas e sem terrorismo alimentar.",
+      "Atendo em Ibiúna desde 2023 homens e mulheres, com foco em emagrecimento, hipertrofia e reeducação alimentar. Meu trabalho parte do que você já come, de onde come e de quanto tempo tem. O plano nasce dessa realidade, não de uma lista pronta.",
+      "Sou graduada em Nutrição pela Cruzeiro do Sul Virtual (2020–2023) e pós-graduada em Nutrição Clínica pelo Pratiensino (2024–2026). \nEspecialização em saúde da mulher 2025 até o momento.\nAtuo também como Responsável Técnica em instituição de longa permanência.\n"
     ],
     "assinatura": "Patricia Rodrigues",
     "cartaoTitulo": "Formação e experiência",
     "credenciais": [
-      {
-        "item": "CRN 84548/P"
-      },
+      "CRN3 84548",
       {
         "item": "Graduação em Nutrição — Cruzeiro do Sul Virtual (2020–2023)"
       },
@@ -37,9 +29,6 @@
       },
       {
         "item": "Responsável técnica — Casa de Santa Rita (ILPI), desde 2024"
-      },
-      {
-        "item": "Nutricionista clínica — Hospital e Maternidade São Francisco (2024–2025)"
       },
       {
         "item": "Atendimento autônomo desde 2023"
@@ -61,17 +50,17 @@
       },
       {
         "titulo": "Acompanhamento",
-        "texto": "Acompanhamos a sua evolução e ajustamos o que for preciso. Você também acompanha o plano pelo app Amplinutri."
+        "texto": "Acompanhamos a sua evolução e ajustamos o que for preciso. Tudo isso na palma da sua mão pelo aplicativo."
       }
     ],
     "modalidades": [
       {
         "rotulo": "Presencial",
-        "texto": "Rua 15 de Novembro, Nº 15 — Centro, Ibiúna/SP"
+        "texto": "Rua XV de Novembro, Nº 15 — Centro, Ibiúna/SP"
       },
       {
         "rotulo": "Online",
-        "texto": "Por vídeo, de onde você estiver"
+        "texto": "Por vídeo chamada, de onde você estiver"
       }
     ],
     "servicosTitulo": "O que atendo",
