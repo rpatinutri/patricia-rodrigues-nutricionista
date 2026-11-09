@@ -1,13 +1,13 @@
 {
-  "nome": "Patricia Rodrigues",
-  "crn": "84548/P",
-  "telefone": "(15) 99611-0107",
-  "telefoneDigitos": "5515996110107",
-  "mensagemWhatsapp": "Olá, Patricia! Vim pelo site e gostaria de agendar uma consulta.",
-  "endereco": "Rua 15 de Novembro, Nº 15 — Centro",
   "enderecoComplemento": "Ibiúna/SP · 18150-045",
   "horario": "Segunda a sexta, das 9h às 18h",
+  "telefoneDigitos": "5515996110107",
+  "siteUrl": "https://patriciarodriguesnutri.com.br",
+  "endereco": "Rua XV de Novembro, Nº 15 — Centro",
+  "telefone": "(15) 99611-0107",
+  "online": "Por vídeo chamada, com horário agendado",
+  "nome": "Patricia Rodrigues",
+  "mensagemWhatsapp": "Olá, Patricia! Vim pelo site e gostaria de agendar uma consulta.",
   "horarioObs": "com horário agendado",
-  "online": "Por vídeo, com horário agendado",
-  "siteUrl": "https://patriciarodriguesnutri.com.br"
+  "crn": "84548"
 }
