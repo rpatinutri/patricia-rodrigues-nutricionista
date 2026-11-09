@@ -2,7 +2,7 @@
 title: Modelo de artigo comentado (pode apagar)
 date: 2026-11-05
 tipo: Artigo comentado
-draft: false
+draft: true
 fonte: Nome da revista, do jornal ou do estudo
 fonte_url: https://exemplo.com
 resumo: "Um resumo curto do que o artigo diz, em duas ou três frases. Este é só
